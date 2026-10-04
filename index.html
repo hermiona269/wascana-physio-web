@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wascana Family Physiotherapy — Regina physio with a specialty in women's health</title>
+<meta name="description" content="Regina family physiotherapy clinic specializing in women's health: pelvic floor therapy, incontinence, pregnancy & postnatal recovery, prolapse, pelvic pain. No referral needed. Direct billing.">
+<!-- PLACEHOLDER SITE: clinic name, team, address, phone and fees are fictional demo values. See README.md -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23B4552D'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='34' fill='%23FAF5EB' text-anchor='middle'%3EW%3C/text%3E%3C/svg%3E">
+<meta name="theme-color" content="#FAF5EB">
+<style>
+  :root{
+    --paper:#FAF5EB; --card:#FFFDF7; --ink:#2A2119; --ink-soft:#5C5248; --line:#E3D9C6;
+    --terra:#B4552D; --terra-deep:#8A3F1E; --sage:#5F7160; --sage-deep:#39463A;
+    --wheat:#D9A441; --rose:#C97F8E; --rose-soft:#F3E2E5;
+    --shadow:0 1px 2px rgba(42,33,25,.05), 0 8px 28px rgba(42,33,25,.07);
+    --r:14px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  body{font-family:'Karla',system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.65;font-size:1.0625rem}
+  h1,h2,h3,.serif{font-family:'Fraunces',Georgia,serif;font-weight:600;line-height:1.15;letter-spacing:-.01em}
+  a{color:inherit}
+  p a{color:var(--terra-deep);text-decoration:underline;text-underline-offset:3px}
+  img,svg{max-width:100%}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+  section{padding:72px 0}
+  :is(a,button,summary,input,textarea,select):focus-visible{outline:3px solid var(--terra);outline-offset:2px;border-radius:4px}
+  .skip{position:absolute;left:-9999px;top:0;background:var(--ink);color:#fff;padding:12px 20px;z-index:99;border-radius:0 0 8px 0}
+  .skip:focus{left:0}
+  .eyebrow{font-size:.8rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--sage-deep)}
+  .h2{font-size:clamp(1.7rem,3.4vw,2.3rem);margin:.35em 0 .5em}
+  .lede{color:var(--ink-soft);max-width:56ch}
+
+  /* ---------- header ---------- */
+  header.site{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .bar{display:flex;align-items:center;gap:24px;padding:14px 0}
+  .brand{display:flex;align-items:center;gap:12px;margin-right:auto}
+  .brand .mark{width:40px;height:40px;border-radius:10px;background:var(--terra);color:var(--paper);display:grid;place-items:center;font-family:'Fraunces',serif;font-size:1.35rem;font-weight:700}
+  .brand b{font-family:'Fraunces',serif;font-size:1.12rem;line-height:1.1;display:block}
+  .brand small{color:var(--ink-soft);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase}
+  nav.main{display:flex;gap:26px;font-weight:600;font-size:.95rem}
+  nav.main a{padding:10px 2px;color:var(--ink);text-decoration:none}
+  nav.main a:hover{color:var(--terra-deep)}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:10px 22px;border-radius:999px;font:inherit;font-weight:700;text-decoration:none;cursor:pointer;border:1.5px solid transparent}
+  .btn-solid{background:var(--terra);color:#fff}
+  .btn-solid:hover{background:var(--terra-deep)}
+  .btn-ghost{border-color:var(--ink);color:var(--ink);background:transparent}
+  .btn-ghost:hover{background:var(--ink);color:var(--paper)}
+  #navToggle{display:none}
+  @media (max-width:900px){
+    nav.main{display:none;position:absolute;top:100%;left:0;right:0;background:var(--paper);border-bottom:1px solid var(--line);flex-direction:column;padding:12px 24px 20px;gap:2px}
+    nav.main.open{display:flex}
+    nav.main a{padding:13px 4px;min-height:44px}
+    #navToggle{display:inline-flex;background:none;border:1.5px solid var(--ink);color:var(--ink);border-radius:10px;min-width:44px;min-height:44px;align-items:center;justify-content:center;font-size:1.2rem;cursor:pointer}
+    .bar .btn-solid{display:none}
+  }
+
+  /* ---------- hero ---------- */
+  .hero{padding:64px 0 56px}
+  .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
+  .hero h1{font-size:clamp(2.1rem,4.6vw,3.3rem);margin:.4em 0 .5em}
+  .hero h1 em{font-style:italic;color:var(--terra-deep)}
+  .hero .lede{font-size:1.15rem}
+  .hero-ctas{display:flex;flex-wrap:wrap;gap:14px;margin:30px 0 0}
+  .trust{display:flex;flex-wrap:wrap;gap:10px 26px;margin-top:34px;padding-top:26px;border-top:1px solid var(--line);font-size:.92rem;font-weight:600;color:var(--sage-deep)}
+  .trust span::before{content:"✓";color:var(--terra);margin-right:7px;font-weight:700}
+  .photo-slot{border-radius:var(--r);box-shadow:var(--shadow);overflow:hidden;border:1px solid var(--line);background:var(--card)}
+  .photo-slot .scene{position:relative;height:340px;background:linear-gradient(180deg,#F6EEDC 0%,#F1E4C8 58%,#D9A441 58.2%,#C98F33 100%)}
+  .photo-slot .horizon{position:absolute;left:0;right:0;bottom:0;height:42%;background:var(--sage);clip-path:polygon(0 62%,14% 48%,30% 58%,46% 40%,60% 55%,76% 44%,88% 56%,100% 47%,100% 100%,0 100%);opacity:.92}
+  .photo-slot .sun{position:absolute;top:16%;right:16%;width:56px;height:56px;border-radius:50%;background:var(--rose)}
+  .photo-slot figcaption{padding:12px 16px;font-size:.8rem;color:var(--ink-soft);text-align:center;border-top:1px dashed var(--line)}
+  @media (max-width:900px){.hero-grid{grid-template-columns:1fr}.photo-slot{order:-1}.photo-slot .scene{height:220px}}
+
+  /* ---------- services ---------- */
+  .svc-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;margin-top:40px;align-items:start}
+  .featured{background:var(--sage-deep);color:#F4EFE3;border-radius:var(--r);padding:36px 34px}
+  .featured h3{color:#fff;font-size:1.5rem;margin:.3em 0}
+  .featured .eyebrow{color:var(--wheat)}
+  .featured p{color:#E2DCCB}
+  .featured .big{font-family:'Fraunces',serif;font-size:1.2rem;line-height:1.4;color:#fff;margin-top:18px}
+  .svc-list{list-style:none}
+  .svc-list li{padding:20px 4px;border-bottom:1px solid var(--line)}
+  .svc-list li:first-child{padding-top:0}
+  .svc-list h3{font-size:1.12rem;margin-bottom:2px}
+  .svc-list p{font-size:.95rem;color:var(--ink-soft)}
+  .svc-list .tag{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--terra-deep);background:var(--rose-soft);border-radius:999px;padding:2px 10px;margin-left:8px;vertical-align:middle}
+  @media (max-width:900px){.svc-grid{grid-template-columns:1fr}}
+
+  /* ---------- first visit ---------- */
+  .visit{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;margin-top:40px;counter-reset:step}
+  .step{position:relative;padding-top:14px}
+  .step::before{counter-increment:step;content:counter(step);font-family:'Fraunces',serif;font-size:2.4rem;color:var(--terra);line-height:1}
+  .step h3{font-size:1.05rem;margin:10px 0 6px}
+  .step p{font-size:.93rem;color:var(--ink-soft)}
+  .consent{margin-top:36px;background:var(--rose-soft);border:1px solid #E6CDD2;border-radius:var(--r);padding:22px 26px;font-size:.98rem;max-width:72ch}
+  .consent b{color:var(--terra-deep)}
+  @media (max-width:900px){.steps{grid-template-columns:1fr 1fr}}
+  @media (max-width:560px){.steps{grid-template-columns:1fr}}
+
+  /* ---------- fees ---------- */
+  .fee-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px}
+  .fee-card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:28px;box-shadow:var(--shadow)}
+  .fee-card h3{font-size:1.15rem;margin-bottom:10px}
+  .fee-card p,.fee-card li{font-size:.95rem;color:var(--ink-soft)}
+  .fee-card ul{padding-left:20px;display:grid;gap:6px}
+  .price{font-family:'Fraunces',serif;font-size:1.5rem;color:var(--terra-deep);margin:6px 0}
+  @media (max-width:900px){.fee-grid{grid-template-columns:1fr}}
+
+  /* ---------- team ---------- */
+  .team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px}
+  .member{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:28px}
+  .avatar{width:64px;height:64px;border-radius:50%;display:grid;place-items:center;font-family:'Fraunces',serif;font-size:1.4rem;font-weight:700;color:#fff;background:var(--sage)}
+  .member:nth-child(2) .avatar{background:var(--terra)}
+  .member:nth-child(3) .avatar{background:var(--wheat);color:var(--ink)}
+  .member h3{font-size:1.15rem;margin:16px 0 2px}
+  .member .role{font-size:.85rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--sage-deep)}
+  .member p{font-size:.93rem;color:var(--ink-soft);margin-top:10px}
+  @media (max-width:900px){.team-grid{grid-template-columns:1fr}}
+
+  /* ---------- community ---------- */
+  .community .cols{display:grid;grid-template-columns:repeat(3,1fr);gap:36px;margin-top:36px}
+  .community h3{font-size:1.1rem;margin-bottom:8px}
+  .community p{font-size:.95rem;color:var(--ink-soft)}
+  @media (max-width:900px){.community .cols{grid-template-columns:1fr}}
+
+  /* ---------- faq ---------- */
+  details{border-bottom:1px solid var(--line);background:transparent}
+  summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 6px;font-weight:700;font-size:1.02rem;min-height:44px}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";font-family:'Fraunces',serif;font-size:1.5rem;color:var(--terra);line-height:1;transition:transform .2s}
+  details[open] summary::after{transform:rotate(45deg)}
+  details .a{padding:0 6px 20px;color:var(--ink-soft);font-size:.97rem;max-width:70ch}
+  .faq-wrap{max-width:820px;margin:40px auto 0}
+
+  /* ---------- contact ---------- */
+  .contact{background:var(--sage-deep);color:#EFE9DA;border-radius:var(--r);padding:52px 44px;margin:20px 0 90px}
+  .contact h2{color:#fff}
+  .contact .lede{color:#D8D2C2}
+  .c-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;margin-top:34px}
+  .c-block h3{font-size:1rem;letter-spacing:.08em;text-transform:uppercase;color:var(--wheat);font-family:'Karla',sans-serif;font-weight:700;margin-bottom:10px}
+  .c-block{margin-bottom:26px;font-size:.98rem}
+  .c-block a.phone{font-family:'Fraunces',serif;font-size:1.9rem;color:#fff;text-decoration:none;display:inline-block;margin-bottom:4px}
+  .c-block a{color:#F1D9A8}
+  form .row{display:grid;gap:12px}
+  input,textarea{width:100%;font:inherit;padding:13px 15px;border-radius:10px;border:1px solid #7A8A7B;background:#FDFBF4;color:var(--ink)}
+  textarea{resize:vertical}
+  .contact .btn-solid{margin-top:6px}
+  .formnote{font-size:.8rem;color:#C9C2B0;margin-top:10px}
+  @media (max-width:900px){.c-grid{grid-template-columns:1fr}.contact{padding:36px 24px}}
+
+  /* ---------- footer ---------- */
+  footer{padding:48px 0 120px;font-size:.9rem;color:var(--ink-soft);border-top:1px solid var(--line)}
+  footer .cols{display:grid;grid-template-columns:2fr 1fr;gap:36px}
+  footer .land{max-width:62ch}
+  footer nav{display:flex;flex-direction:column;gap:8px}
+  footer a{color:var(--ink-soft)}
+  .fine{margin-top:34px;padding-top:18px;border-top:1px dashed var(--line);font-size:.8rem;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  @media (max-width:700px){footer .cols{grid-template-columns:1fr}}
+
+  /* ---------- mobile call bar ---------- */
+  .callbar{display:none;position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--ink);padding:10px 14px;gap:10px}
+  .callbar .btn{flex:1}
+  .callbar .btn-ghost{border-color:#6B6157;color:#EFE9DA}
+  @media (max-width:900px){.callbar{display:flex}}
+
+  /* ---------- reveal ---------- */
+  .reveal{opacity:0;transform:translateY(14px);transition:opacity .5s ease,transform .5s ease}
+  .reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site">
+  <div class="wrap bar">
+    <a class="brand" href="#top" style="text-decoration:none">
+      <span class="mark" aria-hidden="true">W</span>
+      <span><b>Wascana Family Physiotherapy</b><small>Women's health specialists · Regina</small></span>
+    </a>
+    <nav class="main" id="mainNav" aria-label="Main">
+      <a href="#services">What we treat</a>
+      <a href="#visit">Your first visit</a>
+      <a href="#fees">Fees &amp; coverage</a>
+      <a href="#team">Team</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="btn btn-solid" href="tel:+13065550142">Call (306) 555‑0142</a>
+    <button id="navToggle" aria-expanded="false" aria-controls="mainNav" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main id="main">
+<a id="top"></a>
+
+<!-- ============ HERO ============ -->
+<section class="hero wrap" aria-labelledby="h1">
+  <div class="hero-grid">
+    <div>
+      <p class="eyebrow">Regina · Family physiotherapy · Women's health specialty</p>
+      <h1 id="h1">Leaking when you laugh is common. It's also <em>treatable.</em></h1>
+      <p class="lede">Wascana is a family physiotherapy clinic on the prairie with a specialty in women's health — pelvic floor therapy, pregnancy and postnatal recovery, and straight answers about what's going on. No referral needed. No judgment, ever.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-solid" href="tel:+13065550142">Call (306) 555‑0142</a>
+        <a class="btn btn-ghost" href="#services">See what we treat</a>
+      </div>
+      <p class="trust">
+        <span>No doctor referral needed</span>
+        <span>Direct billing to most plans</span>
+        <span>Free, plowed parking</span>
+        <span>English · ਪੰਜਾਬੀ · हिन्दी</span>
+      </p>
+    </div>
+    <!-- Photo slot: replace .scene with real clinic/team photography before launch -->
+    <figure class="photo-slot reveal">
+      <div class="scene" role="img" aria-label="Stylized prairie horizon illustration placeholder">
+        <div class="sun" aria-hidden="true"></div>
+        <div class="horizon" aria-hidden="true"></div>
+      </div>
+      <figcaption>Photo of the clinic team goes here — warm, real, unposed.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section id="services" class="wrap" aria-labelledby="svc-h">
+  <p class="eyebrow">What we treat</p>
+  <h2 class="h2" id="svc-h">The conversation you've been putting off? We have it every day.</h2>
+  <p class="lede">One in three women experiences urinary incontinence at some point, and most wait years before telling anyone. You can start here instead.</p>
+  <div class="svc-grid">
+    <div class="featured reveal">
+      <p class="eyebrow">Our specialty</p>
+      <h3>Pelvic health &amp; incontinence</h3>
+      <p>Bladder and bowel leaking, sudden urgency, the tampon dance in the parking lot, prolapse heaviness, pelvic pain, pain with sex. We assess what's actually happening and treat it like the musculoskeletal issue it is — because it almost always is one.</p>
+      <p class="big">And no — Kegels aren't automatically the answer. For a lot of women they make things worse. That's exactly why an assessment matters.</p>
+    </div>
+    <ul class="svc-list">
+      <li class="reveal"><h3>Pregnancy &amp; postnatal<span class="tag">Pre &amp; postnatal</span></h3><p>Hip and back pain while pregnant, C‑section and perineal scar recovery, checking your deep core (diastasis) before you return to exercise, and getting back to running and lifting without leaks.</p></li>
+      <li class="reveal"><h3>Pelvic pain</h3><p>Endometriosis-related pain, vulvodynia, tailbone pain, pain with insertion — a plan that starts with listening, not minimizing.</p></li>
+      <li class="reveal"><h3>Prolapse</h3><p>Heaviness, dragging, the "something's coming down" feeling. Conservative management, pessary coaching, and strength that keeps symptoms manageable.</p></li>
+      <li class="reveal"><h3>Surgery prep &amp; recovery</h3><p>Hysterectomy, prolapse repair, C‑section: what to do in the weeks before, and a clear 12‑week path after.</p></li>
+      <li class="reveal"><h3>Menopause &amp; bone health</h3><p>Osteoporosis‑safe strength training, posture and balance work, and fracture prevention — on the windiest, sunniest, vitamin‑D‑lightest prairie there is.</p></li>
+      <li class="reveal"><h3>Family physiotherapy<span class="tag">Everyone else, too</span></h3><p>Backs and necks, sports injuries, arthritis, balance and falls, knee and shoulder rehab — book the whole household, from the teenager's ankle to Grandma's hip.</p></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ FIRST VISIT ============ -->
+<section id="visit" class="visit" aria-labelledby="visit-h">
+  <div class="wrap">
+    <p class="eyebrow">Your first visit</p>
+    <h2 class="h2" id="visit-h">Here's exactly what will happen</h2>
+    <div class="steps">
+      <div class="step reveal"><h3>Call or request a time</h3><p>Tell us the problem in as few words as you like. If we're not the right fit, we'll say so and point you to someone who is.</p></div>
+      <div class="step reveal"><h3>Assessment visit (45–60 min)</h3><p>History, movement, and a real conversation. Wear comfortable clothing — there's a change room, and gowns if you'd prefer.</p></div>
+      <div class="step reveal"><h3>Consent, step by step</h3><p>For pelvic health, an internal assessment is often the fastest route to answers — but it happens <em>only</em> if you consent, and you can stop at any point. Great care is possible without one.</p></div>
+      <div class="step reveal"><h3>A plan you can live with</h3><p>Exercises, habits, a timeline, roughly how many visits you'll need, and what each one costs — before you commit to anything.</p></div>
+    </div>
+    <p class="consent reveal"><b>Privacy:</b> our women's health rooms are at the back of the clinic with their own waiting corner. Nobody overhears your appointment, and nobody sees your chart. Treatment is with a registered physiotherapist of your choosing where scheduling allows.</p>
+  </div>
+</section>
+
+<!-- ============ FEES ============ -->
+<section id="fees" class="wrap" aria-labelledby="fees-h">
+  <p class="eyebrow">Fees &amp; coverage</p>
+  <h2 class="h2" id="fees-h">The plain truth about paying for it</h2>
+  <div class="fee-grid">
+    <div class="fee-card reveal">
+      <h3>Saskatchewan Health</h3>
+      <p>Private physiotherapy visits aren't covered by provincial health — but you don't need a referral to book. Physiotherapists are <strong>direct‑access</strong> providers in Saskatchewan.</p>
+      <p style="margin-top:10px">Hospital‑based outpatient physio is covered, with wait times that can stretch for months. Most of our patients use their extended benefits instead.</p>
+    </div>
+    <div class="fee-card reveal">
+      <h3>Extended benefits</h3>
+      <p>We <strong>direct bill</strong> most plans, so you pay only your share:</p>
+      <ul>
+        <li>Blue Cross SK</li>
+        <li>Canada Life / Great‑West / Sun Life</li>
+        <li>Green Shield · Manulife</li>
+        <li>WCB &amp; SGI claims</li>
+      </ul>
+      <p style="margin-top:10px;font-size:.88rem">A few insurers still require a physician's referral to reimburse — worth a five‑minute check with your plan.</p>
+    </div>
+    <div class="fee-card reveal">
+      <h3>Typical costs</h3>
+      <p class="price">$110–130</p>
+      <p>initial assessment (45–60 min)</p>
+      <p class="price" style="margin-top:14px">$60–80</p>
+      <p>follow‑up visit (30 min)</p>
+      <p style="margin-top:12px;font-size:.88rem">Receipts issued for the medical tax credit. Exact per‑visit cost confirmed before you book — no surprises at the desk.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TEAM ============ -->
+<section id="team" class="wrap" aria-labelledby="team-h">
+  <p class="eyebrow">The team</p>
+  <h2 class="h2" id="team-h">Regina therapists you'll actually recognize</h2>
+  <div class="team-grid">
+    <!-- Placeholder bios: replace with real team before launch -->
+    <article class="member reveal"><div class="avatar" aria-hidden="true">SN</div><h3>Sarah Neufeld, PT</h3><p class="role">Owner · Women's health lead</p><p>Fifteen years in Regina clinics, with post‑graduate certification training in pelvic health physiotherapy. If you've been told "that's normal after kids," she's the therapist you want in the room.</p></article>
+    <article class="member reveal"><div class="avatar" aria-hidden="true">JK</div><h3>Jasleen Kaur, PT</h3><p class="role">Pelvic health physiotherapist</p><p>Sees patients in English, Punjabi, and Hindi. Special interests in postnatal recovery and pelvic pain, and she's the reason our Saturday morning roster fills up first.</p></article>
+    <article class="member reveal"><div class="avatar" aria-hidden="true">TO</div><h3>Tom Olson, PT</h3><p class="role">Family &amp; sports physiotherapy</p><p>Sports injuries, joint replacements, balance and falls. Keeps the rest of the household moving while the grown‑ups handle their appointments two doors down.</p></article>
+  </div>
+</section>
+
+<!-- ============ COMMUNITY ============ -->
+<section class="community" aria-labelledby="comm-h">
+  <div class="wrap">
+    <p class="eyebrow">Rooted here</p>
+    <h2 class="h2" id="comm-h">Built for how Regina actually lives</h2>
+    <div class="cols">
+      <div class="reveal"><h3>Drive‑in friendly</h3><p>Patients come to us from White City, Balgonie, Grand Coulee, Lumsden, Pilot Butte, and Moose Jaw — we hold early and late slots for the long drive, and we'll tell you honestly which visits can be virtual instead.</p></div>
+      <div class="reveal"><h3>Winter‑proof front door</h3><p>Step‑free entry, a plowed and sanded lot by 7&nbsp;a.m., and a coat hook that's seen every parka the Queen City owns. Weather has never been a reason to miss a session here.</p></div>
+      <div class="reveal"><h3>Culturally safe care</h3><p>We serve families of every background across Regina and work gladly alongside your family physician, OB, midwife, or community health worker. Ask for a female therapist — that's not a favour, it's standard.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section id="faq" class="wrap" aria-labelledby="faq-h">
+  <p class="eyebrow">Questions we hear at the desk</p>
+  <h2 class="h2" id="faq-h">Frequently asked, answered plainly</h2>
+  <div class="faq-wrap">
+    <details class="reveal"><summary>Do I need a doctor's referral?</summary><div class="a">No. In Saskatchewan you can book directly with a physiotherapist — it's a direct‑access profession. A few insurance plans still ask for a physician's referral before they'll reimburse, so it's worth checking your benefits book before your first visit.</div></details>
+    <details class="reveal"><summary>Is this covered by my insurance?</summary><div class="a">Saskatchewan Health doesn't cover private clinic visits, but most extended‑benefit plans do (typically $50–$150 per visit up to an annual cap). We direct bill Blue Cross SK, Canada Life, Sun Life, Green Shield, Manulife and most others, and we handle WCB and SGI claims.</div></details>
+    <details class="reveal"><summary>Will you make me do an internal exam?</summary><div class="a">Never without your consent, and consent is revisited at every step. Internal assessment is often the fastest way to figure out what's going on with pelvic floor symptoms — but plenty of women improve with external work alone, and that's a legitimate plan. You can stop at any time, and you can ask questions first — do.</div></details>
+    <details class="reveal"><summary>What should I bring / wear?</summary><div class="a">Comfortable clothes you can move in (shorts are easier than jeans), any imaging or surgical reports if you have them, and your insurance card if you plan to use benefits. First visits run 45–60 minutes — build in ten extra minutes for the paperwork.</div></details>
+    <details class="reveal"><summary>Can I bring my kids or my partner?</summary><div class="a">Partners are welcome at women's health appointments — your call entirely. Kids can wait in the front area; tell us when booking and we'll time it around nap schedules if we can help it.</div></details>
+    <details class="reveal"><summary>How soon can I be seen?</summary><div class="a">Usually within one to two weeks. Post‑surgical referrals (hysterectomy, prolapse repair, C‑section) get priority slots — call and say it's post‑op.</div></details>
+    <details class="reveal"><summary>Is it too late if this has been happening for years?</summary><div class="a">No. Our oldest "I should have come in sooner" story in the file is twenty‑two years. The pelvic floor responds to treatment at every age — including after menopause.</div></details>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact" class="wrap" aria-labelledby="contact-h">
+  <div class="contact">
+    <p class="eyebrow" style="color:var(--wheat)">Get in touch</p>
+    <h2 class="h2" id="contact-h">Say the quiet part out loud. We'll book you in.</h2>
+    <div class="c-grid">
+      <div>
+        <div class="c-block">
+          <h3>Call us — fastest way</h3>
+          <a class="phone" href="tel:+13065550142">(306) 555‑0142</a>
+          <p>Mon–Fri 8:00–6:00 · Sat 9:00–1:00<br>Voicemail outside hours is checked first thing.</p>
+        </div>
+        <div class="c-block">
+          <h3>Find us</h3>
+          <p>Suite 310, 4021 Hillsdale Street<br>Regina, SK S4S 2X9<br>
+          <a href="https://maps.google.com/?q=4021+Hillsdale+Street+Regina+SK" rel="noopener">Open in Google Maps</a></p>
+        </div>
+        <div class="c-block">
+          <h3>Email</h3>
+          <p><a href="mailto:hello@wascanaphysio.example">hello@wascanaphysio.example</a></p>
+        </div>
+      </div>
+      <div>
+        <h3 style="font-size:1rem;margin-bottom:12px">Or ask us to call you back</h3>
+        <form id="cbForm">
+          <div class="row">
+            <label style="display:block">Name<input required name="name" autocomplete="name" placeholder="Your name"></label>
+            <label style="display:block">Phone<input required name="phone" type="tel" autocomplete="tel" placeholder="306‑…"></label>
+            <label style="display:block">What can we help with? (optional)<textarea name="msg" rows="3" placeholder="A sentence is plenty."></textarea></label>
+            <button class="btn btn-solid" type="submit">Request a call back</button>
+            <p class="formnote">Demo form: opens your email app addressed to the clinic. A real deployment would post to the clinic's booking system.</p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <p class="land">Regina sits on Treaty 4 territory — the traditional lands of the Anishinaabe, Cree, Saulteaux, Dakota, Nakoda, and Lakota peoples, and the homeland of the Métis. We're grateful to provide care here and to the people who've cared for this place since long before the clinic had a name.</p>
+      <nav aria-label="Footer">
+        <a href="#services">What we treat</a>
+        <a href="#fees">Fees &amp; coverage</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Book a visit</a>
+      </nav>
+    </div>
+    <div class="fine">
+      <span>© <span id="yr">2026</span> Wascana Family Physiotherapy · Registered with the Saskatchewan College of Physical Therapists</span>
+      <span>Demo site — name, team, address, phone &amp; fees are placeholders.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- mobile sticky call bar -->
+<div class="callbar" aria-label="Quick actions">
+  <a class="btn btn-solid" href="tel:+13065550142">Call now</a>
+  <a class="btn btn-ghost" href="#contact">Book a visit</a>
+</div>
+
+<script>
+  // mobile nav
+  const t=document.getElementById('navToggle'),n=document.getElementById('mainNav');
+  t.addEventListener('click',()=>{const o=n.classList.toggle('open');t.setAttribute('aria-expanded',o)});
+  n.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{n.classList.remove('open');t.setAttribute('aria-expanded','false')}));
+  // year
+  document.getElementById('yr').textContent=new Date().getFullYear();
+  // callback form -> mailto (demo only)
+  document.getElementById('cbForm').addEventListener('submit',e=>{
+    e.preventDefault();
+    const f=new FormData(e.target);
+    const body=`Name: ${f.get('name')}%0D%0APhone: ${f.get('phone')}%0D%0A%0D%0A${encodeURIComponent(f.get('msg')||'')}`;
+    location.href=`mailto:hello@wascanaphysio.example?subject=Call%20back%20request&body=${body}`;
+  });
+  // reveal on scroll (skipped entirely for reduced motion via CSS)
+  if(matchMedia('(prefers-reduced-motion: no-preference)').matches){
+    const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.12});
+    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  } else {
+    document.querySelectorAll('.reveal').forEach(el=>el.classList.add('in'));
+  }
+</script>
+</body>
+</html>
